@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Editing from "./day_1/Editing";
+import CleanupChat from "./day_2/CleanupChat";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Editing />
+    <CleanupChat />
   </React.StrictMode>,
   document.getElementById("root")
 );
