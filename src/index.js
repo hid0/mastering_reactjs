@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import TimeElapsed from "./day3/TimeElapsed";
+import Komponenku from "./day3/Komponenku";
 
 ReactDOM.render(
   <React.StrictMode>
-    <TimeElapsed />
+    <Komponenku />
   </React.StrictMode>,
   document.getElementById("root")
 );
