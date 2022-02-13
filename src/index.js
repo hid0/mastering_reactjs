@@ -1,10 +1,10 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import CleanupChat from "./day_2/CleanupChat";
+import TimeElapsed from "./day3/TimeElapsed";
 
 ReactDOM.render(
   <React.StrictMode>
-    <CleanupChat />
+    <TimeElapsed />
   </React.StrictMode>,
   document.getElementById("root")
 );

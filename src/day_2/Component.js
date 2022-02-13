@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+
 const Component = (props) => {
   const [counter, setCounter] = useState(0);
 
