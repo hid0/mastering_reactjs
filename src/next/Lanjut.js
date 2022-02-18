@@ -1,10 +1,12 @@
-import { useMemo } from "react";
-
-const fetchMenu = () => {
-  return ["nasi padang", "nasi uduk", "nasi gudeg"];
+let reducer = function (state, action) {
+  switch (action.type) {
+    case "INCREMENT":
+      // logic for increment state
+      return state + 1;
+    case "DECREMENT":
+      // logic for decrement state
+      return state - 1;
+    default:
+      return state;
+  }
 };
-
-let menu = useMemo(() => {
-  if ((props.wilayah = "bali")) return ["ayam betutu"];
-  return fetchMenu();
-}, [props.wilayah]);
