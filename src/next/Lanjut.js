@@ -1,12 +1,25 @@
+import { useReducer } from "react";
+
 let reducer = function (state, action) {
   switch (action.type) {
     case "INCREMENT":
-      // logic for increment state
       return state + 1;
     case "DECREMENT":
-      // logic for decrement state
       return state - 1;
     default:
       return state;
   }
 };
+
+const CounterComponent = (props) => {
+  let [counter, dispatch] = useReducer(reducer, 0);
+  return (
+    <div>
+      <button onClick={(e) => dispatch({ type: "DECREMENT" })}>-</button>
+      {counter}
+      <button onClick={(e) => dispatch({ type: "INCREMENT" })}>+</button>
+    </div>
+  );
+};
+
+export default CounterComponent;

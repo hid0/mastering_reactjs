@@ -1,10 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Komponenku from "./day3/Komponenku";
+import Todo from "./next/TodoList";
+import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Komponenku />
+    <div className="font-sans bg-slate-50 pt-16 w-full h-screen">
+      <Todo />
+    </div>
   </React.StrictMode>,
   document.getElementById("root")
 );
