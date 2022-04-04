@@ -1,15 +1,18 @@
-import React from "react";
-import Child from "./next/components/Child";
+import React, { useState } from "react";
 
-let TemaSitus = React.createContext("light");
+const useToggle = function () {
+  const [value, toggle] = useState("OFF");
 
-const App = (props) => {
+  return [value, toggle];
+};
+
+const App = () => {
+  let [statusLampu, toggleLampu] = useToggle();
   return (
-    <div>
-      <TemaSitus.Provider value="light">
-        <Child />
-      </TemaSitus.Provider>
-    </div>
+    <>
+      <div>lampu saat ini : {statusLampu}</div> <br />
+      <button onClick={(e) => toggleLampu()}>Saklar</button>
+    </>
   );
 };
 
