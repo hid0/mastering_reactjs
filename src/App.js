@@ -3,6 +3,7 @@ import React from "react";
 import { Navigate, NavLink, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
+import Category from "./pages/Category";
 
 function App() {
   return (
@@ -24,11 +25,17 @@ function App() {
             Member
           </NavLink>
         </li>
+        <li>
+          <NavLink to="/category" activeClassName="active">
+            Category
+          </NavLink>
+        </li>
       </ul>
       <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/member" element={<Navigate to="/" replace />} />
+        <Route path="/category" element={<Category />} />
       </Routes>
     </div>
   );
