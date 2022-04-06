@@ -31,12 +31,13 @@ function App() {
           </NavLink>
         </li>
       </ul>
-      <Routes>
+      {/* use react router dom v6 */}
+      {/* <Routes>
         <Route exact path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/member" element={<Navigate to="/" replace />} />
         <Route path="/category" element={<Category />} />
-      </Routes>
+      </Routes> */}
     </div>
   );
 }
