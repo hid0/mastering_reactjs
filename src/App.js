@@ -1,10 +1,10 @@
 import "./App.css";
 import React from "react";
-import { Navigate, NavLink, Route, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Category from "./pages/Category";
-
+import { Switch, NavLink, Route, Redirect } from "react-router-dom";
+import Post from "./pages/Post";
 function App() {
   return (
     <div className="App">
@@ -38,6 +38,22 @@ function App() {
         <Route path="/member" element={<Navigate to="/" replace />} />
         <Route path="/category" element={<Category />} />
       </Routes> */}
+      <div className="main">
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/post/:id">
+            <Post />
+          </Route>
+          {/* <Route path="/member">
+            <Redirect to="/" />
+          </Route>
+          <Route path="/category">
+            <Category />
+          </Route> */}
+        </Switch>
+      </div>
     </div>
   );
 }
